@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yahtzee Scorebord</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f8f8f8;
+      }
+      table {
+        border-collapse: collapse;
+        width: 60%;
+        margin: 20px auto;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #333;
+        padding: 10px;
+      }
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+      td {
+        text-align: center;
+      }
+      .button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      #resultaat {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+      .held {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dobbelstenen-container"></div>
+    <div id="rollen-over">Aantal worpen over: 3</div>
+    <div id="three-of-a-kind" class="score">Three of a kind: 0</div>
+    <div id="four-of-a-kind" class="score">Four of a kind: 0</div>
+    <div id="full-house" class="score">Full house: 0</div>
+    <div id="small-straight" class="score">Small straight: 0</div>
+    <div id="large-straight" class="score">Large straight: 0</div>
+    <div id="yahtzee" class="score">Yahtzee: 0</div>
+    <div id="chance" class="score">Chance: 0</div>
+
+    <button class="button" id="gooi-knop">Gooi dobbelstenen</button>
+
+    <div id="resultaat"></div>
+
+    <table id="scorebord">
+      <tr>
+        <th>Categorie</th>
+        <th>Score</th>
+      </tr>
+      <tr>
+        <td>Aantal enen</td>
+        <td id="enen">0</td>
+      </tr>
+      <tr>
+        <td>Aantal tweeën</td>
+        <td id="tweeën">0</td>
+      </tr>
+      <tr>
+        <td>Aantal drieën</td>
+        <td id="drieën">0</td>
+      </tr>
+      <tr>
+        <td>Aantal vieren</td>
+        <td id="vieren">0</td>
+      </tr>
+      <tr>
+        <td>Aantal vijfen</td>
+        <td id="vijfen">0</td>
+      </tr>
+      <tr>
+        <td>Aantal zessen</td>
+        <td id="zessen">0</td>
+      </tr>
+      <tr>
+        <td>Three of a Kind</td>
+        <td id="three-of-a-kind-score">0</td>
+      </tr>
+      <tr>
+        <td>Four of a Kind</td>
+        <td id="four-of-a-kind-score">0</td>
+      </tr>
+      <tr>
+        <td>Full House</td>
+        <td id="full-house">0</td>
+      </tr>
+      <tr>
+        <td>Kleine Straat</td>
+        <td id="small-straight">0</td>
+      </tr>
+      <tr>
+        <td>Grote Straat</td>
+        <td id="large-straight">0</td>
+      </tr>
+      <tr>
+        <td>Yahtzee</td>
+        <td id="yahtzee">0</td>
+      </tr>
+      <tr>
+        <td>Chance</td>
+        <td id="chance">0</td>
+      </tr>
+      <tr>
+        <td><strong>Totaalscore</strong></td>
+        <td id="totaal">0</td>
+      </tr>
+    </table>
+
+    <script src="Yahtzee.js"></script>
+  </body>
+</html>
